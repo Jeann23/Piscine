@@ -1,0 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jecarlos <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/11 21:34:49 by jecarlos          #+#    #+#             */
+/*   Updated: 2023/09/11 21:59:14 by jecarlos         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_iterative_power(int nb, int power)
+{
+	int	a;
+
+	a = nb;
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	while (power > 1)
+	{
+		a = a * nb;
+		power--;
+	}
+	return (a);
+}
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%i", ft_iterative_power(2, 0));
+}*/
